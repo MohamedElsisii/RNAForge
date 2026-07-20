@@ -1,0 +1,20 @@
+name: rnaforge
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.12
+  - pip
+
+  - fastqc=0.12.1
+  - multiqc=1.35
+  - cutadapt=5.2
+  - trimmomatic=0.39
+
+  - hisat2=2.2.2
+  - bowtie2=2.5.5
+  - bwa=0.7.19
+  - samtools=1.24
+  - subread=2.1.1

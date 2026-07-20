@@ -84,7 +84,8 @@ or
 
     log.info """
     =========================================
-                 RNalyze
+     RNAForge v${workflow.manifest.version}
+    A modular Nextflow DSL2 RNA-seq pipeline                       
     =========================================
     Input        : ${params.input}
     Reference    : ${params.reference ?: params.assembly}
