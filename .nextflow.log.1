@@ -1,0 +1,181 @@
+Jul-20 17:34:54.216 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --reference reference --input test_se --aligner hisat2 --trimmer none
+Jul-20 17:34:54.359 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Jul-20 17:34:54.397 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/sisi/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Jul-20 17:34:54.430 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-20 17:34:54.431 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-20 17:34:54.436 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Jul-20 17:34:54.461 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Jul-20 17:34:54.654 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Jul-20 17:34:54.666 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-20 17:34:54.741 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/sisi/RNalyze-NF/nextflow.config
+Jul-20 17:34:54.748 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/sisi/RNalyze-NF/nextflow.config
+Jul-20 17:34:54.757 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Jul-20 17:34:54.791 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-20 17:34:55.590 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-20 17:34:55.591 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-20 17:34:55.618 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/sisi/.nextflow/secrets/store.json
+Jul-20 17:34:55.625 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6e4c0d8c] - activable => nextflow.secret.LocalSecretsProvider@6e4c0d8c
+Jul-20 17:34:55.648 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [gloomy_liskov] - revision: 24167660db
+Jul-20 17:34:55.807 [main] DEBUG nextflow.Session - Session UUID: fce0cd82-a4d2-4c6f-8fb1-0fc97bf4627c
+Jul-20 17:34:55.807 [main] DEBUG nextflow.Session - Run name: gloomy_liskov
+Jul-20 17:34:55.808 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jul-20 17:34:55.823 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-20 17:34:55.834 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 17:34:55.870 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (21:49 EEST)
+  System: Linux 5.15.0-139-generic
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 17.0.15+6-Ubuntu-0ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 18416@Sisi [127.0.1.1]
+  CPUs: 8 - Mem: 6.7 GB (1.2 GB) - Swap: 2 GB (1.3 GB)
+Jul-20 17:34:55.901 [main] DEBUG nextflow.Session - Work-dir: /home/sisi/RNalyze-NF/work [ext2/ext3]
+Jul-20 17:34:55.930 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-20 17:34:55.945 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-20 17:34:55.948 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Jul-20 17:34:56.001 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-20 17:34:56.017 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jul-20 17:34:56.109 [main] DEBUG nextflow.Session - Session start
+Jul-20 17:34:56.119 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Jul-20 17:34:56.126 [main] DEBUG nextflow.Session - Using default localLib path: /home/sisi/RNalyze-NF/lib
+Jul-20 17:34:58.010 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-20 17:34:58.479 [main] INFO  nextflow.Nextflow - 
+    =========================================
+                 RNalyze
+    =========================================
+    Input        : test_se
+    Reference    : reference
+    Annotation   : Auto-detected
+    Aligner      : hisat2
+    Trimmer      : none
+    Layout       : Auto-detected
+    Output       : results
+    =========================================
+    
+Jul-20 17:34:58.499 [main] INFO  nextflow.script.BaseScript - Detected single-end
+Jul-20 17:34:58.660 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FASTQC` matches process PREPROCESSING:QC_WORKFLOW:FASTQC
+Jul-20 17:34:58.671 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.672 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.687 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-20 17:34:58.698 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=6.7 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Jul-20 17:34:58.702 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-20 17:34:58.767 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PREPROCESSING:QC_WORKFLOW:FASTQC': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.826 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:MULTIQC` matches process PREPROCESSING:QC_WORKFLOW:MULTIQC
+Jul-20 17:34:58.830 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.830 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.832 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PREPROCESSING:QC_WORKFLOW:MULTIQC': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.843 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:HISAT2_BUILD` matches process REFERENCE:HISAT2_BUILD
+Jul-20 17:34:58.846 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.847 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.848 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'REFERENCE:HISAT2_BUILD': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.861 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:HISAT2` matches process ALIGNMENT:HISAT2
+Jul-20 17:34:58.868 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.868 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.870 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ALIGNMENT:HISAT2': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.883 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SAMTOOLS_SORT` matches process POST_ALIGNMENT:SAMTOOLS_SORT
+Jul-20 17:34:58.886 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.887 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.888 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'POST_ALIGNMENT:SAMTOOLS_SORT': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.897 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SAMTOOLS_INDEX` matches process POST_ALIGNMENT:SAMTOOLS_INDEX
+Jul-20 17:34:58.900 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.900 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.901 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'POST_ALIGNMENT:SAMTOOLS_INDEX': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.909 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SAMTOOLS_FLAGSTAT` matches process POST_ALIGNMENT:SAMTOOLS_FLAGSTAT
+Jul-20 17:34:58.912 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.913 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.914 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'POST_ALIGNMENT:SAMTOOLS_FLAGSTAT': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.922 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SAMTOOLS_IDXSTATS` matches process POST_ALIGNMENT:SAMTOOLS_IDXSTATS
+Jul-20 17:34:58.928 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.928 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.930 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'POST_ALIGNMENT:SAMTOOLS_IDXSTATS': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.941 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SAMTOOLS_STATS` matches process POST_ALIGNMENT:SAMTOOLS_STATS
+Jul-20 17:34:58.944 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.944 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.946 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'POST_ALIGNMENT:SAMTOOLS_STATS': maxForks=0; fair=false; array=0
+Jul-20 17:34:58.991 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:FEATURECOUNTS` matches process QUANTIFICATION:FEATURECOUNTS
+Jul-20 17:34:58.994 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-20 17:34:58.995 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-20 17:34:58.996 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'QUANTIFICATION:FEATURECOUNTS': maxForks=0; fair=false; array=0
+Jul-20 17:34:59.004 [main] DEBUG nextflow.Session - Process names: FASTQC, ALIGNMENT:BOWTIE2, BOWTIE2_BUILD, FEATURECOUNTS, MULTIQC, CUTADAPT, BWA, SAMTOOLS_SORT, POST_ALIGNMENT:SAMTOOLS_STATS, REFERENCE:HISAT2_BUILD, POST_ALIGNMENT:SAMTOOLS_FLAGSTAT, BWA_INDEX, ALIGNMENT:BWA, PREPROCESSING:TRIMMING:TRIMMOMATIC, SAMTOOLS_STATS, HISAT2_BUILD, SAMTOOLS_FLAGSTAT, POST_ALIGNMENT:SAMTOOLS_IDXSTATS, ALIGNMENT:HISAT2, PREPROCESSING:QC_WORKFLOW:MULTIQC, HISAT2, PREPROCESSING:QC_WORKFLOW:FASTQC, QUANTIFICATION:FEATURECOUNTS, PREPROCESSING:TRIMMING:CUTADAPT, REFERENCE_MANAGER, TRIMMOMATIC, POST_ALIGNMENT:SAMTOOLS_SORT, POST_ALIGNMENT:SAMTOOLS_INDEX, BOWTIE2, SAMTOOLS_IDXSTATS, REFERENCE:BOWTIE2_BUILD, SAMTOOLS_INDEX, REFERENCE:BWA_INDEX
+Jul-20 17:34:59.016 [main] DEBUG nextflow.Session - Igniting dataflow network (13)
+Jul-20 17:34:59.025 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: test_se/; pattern: *.fastq.gz; options: [checkIfExists:true]
+Jul-20 17:34:59.026 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PREPROCESSING:QC_WORKFLOW:FASTQC
+Jul-20 17:34:59.028 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PREPROCESSING:QC_WORKFLOW:MULTIQC
+Jul-20 17:34:59.028 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > REFERENCE:HISAT2_BUILD
+Jul-20 17:34:59.029 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGNMENT:HISAT2
+Jul-20 17:34:59.030 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > POST_ALIGNMENT:SAMTOOLS_SORT
+Jul-20 17:34:59.031 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > POST_ALIGNMENT:SAMTOOLS_INDEX
+Jul-20 17:34:59.031 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > POST_ALIGNMENT:SAMTOOLS_FLAGSTAT
+Jul-20 17:34:59.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > POST_ALIGNMENT:SAMTOOLS_IDXSTATS
+Jul-20 17:34:59.032 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > POST_ALIGNMENT:SAMTOOLS_STATS
+Jul-20 17:34:59.033 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QUANTIFICATION:FEATURECOUNTS
+Jul-20 17:34:59.035 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_96ee663b5408389b: /home/sisi/RNalyze-NF/modules/reference/bwa_index.nf
+  _nf_script_998f2dd6c2fb9fa8: /home/sisi/RNalyze-NF/modules/qc/multiqc.nf
+  _nf_script_4d99d98a2c07a303: /home/sisi/RNalyze-NF/subworkflows/alignment.nf
+  _nf_script_09f1ce0ded1c97a1: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_flagstat.nf
+  _nf_script_6a4fe9420b74882a: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_idxstats.nf
+  _nf_script_0d24c0d690496ec6: /home/sisi/RNalyze-NF/subworkflows/trimming.nf
+  _nf_script_841c15dee6fcf759: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_stats.nf
+  _nf_script_9a73e1c9d27a6abe: /home/sisi/RNalyze-NF/modules/trimming/trimmomatic.nf
+  _nf_script_19aaa142739f77f0: /home/sisi/RNalyze-NF/modules/quantification/featurecounts.nf
+  _nf_script_a43494e5589d0e88: /home/sisi/RNalyze-NF/modules/reference/hisat2_build.nf
+  _nf_script_d7badce2feb88c1f: /home/sisi/RNalyze-NF/modules/trimming/cutadapt.nf
+  _nf_script_9f49c3519d1b0503: /home/sisi/RNalyze-NF/modules/input/input.nf
+  _nf_script_287734917818b900: /home/sisi/RNalyze-NF/subworkflows/post_alignment.nf
+  _nf_script_de59286e8a3c0291: /home/sisi/RNalyze-NF/modules/qc/fastqc.nf
+  _nf_script_c7bde2a85eeb452f: /home/sisi/RNalyze-NF/subworkflows/quantification.nf
+  _nf_script_01d570c0dbe57260: /home/sisi/RNalyze-NF/subworkflows/qc.nf
+  _nf_script_3d842c1588e0d5bb: /home/sisi/RNalyze-NF/modules/alignment/hisat2.nf
+  _nf_script_2deb1e2bf4e214a8: /home/sisi/RNalyze-NF/subworkflows/reference.nf
+  _nf_script_0d565bec3c81fef0: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_sort.nf
+  _nf_script_87a440cf604fd56d: /home/sisi/RNalyze-NF/modules/reference/bowtie2_build.nf
+  _nf_script_9f17c245fbbdd3eb: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_index.nf
+  _nf_script_68d5101c5e6ad2cb: /home/sisi/RNalyze-NF/modules/reference/reference_manager.nf
+  _nf_script_6c521eb31ab3df05: /home/sisi/RNalyze-NF/modules/alignment/bowtie2.nf
+  Main: /home/sisi/RNalyze-NF/main.nf
+  _nf_script_7253ae84e1afcb25: /home/sisi/RNalyze-NF/modules/alignment/bwa.nf
+  _nf_script_187ba2a2d06b5d80: /home/sisi/RNalyze-NF/subworkflows/preprocessing.nf
+Jul-20 17:34:59.036 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-20 17:34:59.036 [main] DEBUG nextflow.Session - Session await
+Jul-20 17:34:59.313 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:34:59.317 [Task submitter] INFO  nextflow.Session - [0e/d9006c] Submitted process > REFERENCE:HISAT2_BUILD (hisat2-build)
+Jul-20 17:34:59.482 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:34:59.484 [Task submitter] INFO  nextflow.Session - [3e/92512e] Submitted process > PREPROCESSING:QC_WORKFLOW:FASTQC (SRR13970443)
+Jul-20 17:35:02.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: REFERENCE:HISAT2_BUILD (hisat2-build); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/0e/d9006ca9c28cc2b0bf97e570a836d6]
+Jul-20 17:35:02.136 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 17:35:02.199 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 17:35:02.211 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:35:02.212 [Task submitter] INFO  nextflow.Session - [6f/192342] Submitted process > ALIGNMENT:HISAT2 (SRR13970443)
+Jul-20 17:35:42.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: PREPROCESSING:QC_WORKFLOW:FASTQC (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/3e/92512e384989f1581a03ae254cacc7]
+Jul-20 17:35:42.925 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:35:42.927 [Task submitter] INFO  nextflow.Session - [bd/03c71e] Submitted process > PREPROCESSING:QC_WORKFLOW:MULTIQC (1)
+Jul-20 17:35:47.914 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: PREPROCESSING:QC_WORKFLOW:MULTIQC (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/bd/03c71e2daec179e7bd2169598ad07d]
+Jul-20 17:37:04.178 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: ALIGNMENT:HISAT2 (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/6f/1923424ef59f5362dd5e5cfbee1991]
+Jul-20 17:37:04.205 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:37:04.206 [Task submitter] INFO  nextflow.Session - [15/6f38e3] Submitted process > POST_ALIGNMENT:SAMTOOLS_SORT (SRR13970443)
+Jul-20 17:38:05.335 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: POST_ALIGNMENT:SAMTOOLS_SORT (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/15/6f38e361650f8ef8309774826c80d4]
+Jul-20 17:38:05.379 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:38:05.380 [Task submitter] INFO  nextflow.Session - [7c/32fea0] Submitted process > POST_ALIGNMENT:SAMTOOLS_INDEX (SRR13970443)
+Jul-20 17:38:14.566 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: POST_ALIGNMENT:SAMTOOLS_INDEX (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/7c/32fea0249a83fc35665c64f2d8074b]
+Jul-20 17:38:14.614 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:38:14.615 [Task submitter] INFO  nextflow.Session - [e1/cb9888] Submitted process > POST_ALIGNMENT:SAMTOOLS_IDXSTATS (SRR13970443)
+Jul-20 17:38:14.636 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:38:14.659 [Task submitter] INFO  nextflow.Session - [93/bc8693] Submitted process > POST_ALIGNMENT:SAMTOOLS_FLAGSTAT (SRR13970443)
+Jul-20 17:38:14.672 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:38:14.673 [Task submitter] INFO  nextflow.Session - [4c/8b5551] Submitted process > POST_ALIGNMENT:SAMTOOLS_STATS (SRR13970443)
+Jul-20 17:38:19.991 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: POST_ALIGNMENT:SAMTOOLS_IDXSTATS (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/e1/cb9888b45d93cfdfa00efee51e6042]
+Jul-20 17:38:22.177 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: POST_ALIGNMENT:SAMTOOLS_FLAGSTAT (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/93/bc86933292c1021ead5fe4e3db3010]
+Jul-20 17:38:22.189 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-20 17:38:22.189 [Task submitter] INFO  nextflow.Session - [23/dfd839] Submitted process > QUANTIFICATION:FEATURECOUNTS (featureCounts)
+Jul-20 17:38:28.698 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: QUANTIFICATION:FEATURECOUNTS (featureCounts); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/23/dfd83993831871334fdbce9ca3fc25]
+Jul-20 17:38:34.551 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: POST_ALIGNMENT:SAMTOOLS_STATS (SRR13970443); status: COMPLETED; exit: 0; error: -; workDir: /home/sisi/RNalyze-NF/work/4c/8b55519af392dd5c189ab97e62baeb]
+Jul-20 17:38:34.555 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-20 17:38:34.652 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-20 17:38:34.652 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-20 17:38:34.666 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jul-20 17:38:34.667 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Jul-20 17:38:34.681 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=10; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=13m 14s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=6; peakMemory=6 GB; ]
+Jul-20 17:38:34.925 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-20 17:38:34.945 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jul-20 17:38:34.947 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

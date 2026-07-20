@@ -1,0 +1,6 @@
+2026-07-20 17:14:08	8.7s	happy_payne	ERR	01a4a604ba9908ae39eb1005fc55c8eb	727cad6c-b1d6-48d6-aa4a-5c6dc6da1f3b	nextflow run main.nf --reference reference --input test_pe --aligner hisat2 --trimmer trimmomatic
+2026-07-20 17:23:07	-	gigantic_hopper	-	24167660dbf942fc49015772fb9857da	ed6ab0de-4ad4-486a-a977-9d2ff3704a6f	nextflow run main.nf --reference reference --input test_pe --aligner hisat2 --trimmer trimmomatic
+2026-07-20 17:23:38	2m 18s	pensive_shockley	OK	24167660dbf942fc49015772fb9857da	9b7cedfb-e9b8-430f-8758-0d74107ce515	nextflow run main.nf --reference reference --input test_pe --aligner hisat2 --trimmer cutadapt
+2026-07-20 17:29:12	1m 54s	loquacious_sanger	OK	24167660dbf942fc49015772fb9857da	1e3d94c8-eeeb-4f25-9ed4-f1bc03b64c92	nextflow run main.nf --reference reference --input test_pe --aligner hisat2 --trimmer none
+2026-07-20 17:34:55	3m 40s	gloomy_liskov	OK	24167660dbf942fc49015772fb9857da	fce0cd82-a4d2-4c6f-8fb1-0fc97bf4627c	nextflow run main.nf --reference reference --input test_se --aligner hisat2 --trimmer none
+2026-07-20 17:50:03	3m 52s	tender_franklin	OK	24167660dbf942fc49015772fb9857da	ead7a0c7-7405-42df-a1fb-cf2058911b94	nextflow run main.nf --reference reference --input test_se --aligner hisat2 --trimmer none

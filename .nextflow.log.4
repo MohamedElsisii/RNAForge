@@ -1,0 +1,118 @@
+Jul-20 17:23:05.676 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --reference reference --input test_pe --aligner hisat2 --trimmer trimmomatic
+Jul-20 17:23:05.823 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Jul-20 17:23:05.866 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/sisi/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Jul-20 17:23:05.907 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-20 17:23:05.909 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-20 17:23:05.916 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Jul-20 17:23:05.947 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Jul-20 17:23:06.205 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Jul-20 17:23:06.214 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-20 17:23:06.278 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/sisi/RNalyze-NF/nextflow.config
+Jul-20 17:23:06.283 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/sisi/RNalyze-NF/nextflow.config
+Jul-20 17:23:06.291 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Jul-20 17:23:06.325 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-20 17:23:07.120 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-20 17:23:07.120 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-20 17:23:07.146 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/sisi/.nextflow/secrets/store.json
+Jul-20 17:23:07.152 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4adc663e] - activable => nextflow.secret.LocalSecretsProvider@4adc663e
+Jul-20 17:23:07.172 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [gigantic_hopper] - revision: 24167660db
+Jul-20 17:23:07.336 [main] DEBUG nextflow.Session - Session UUID: ed6ab0de-4ad4-486a-a977-9d2ff3704a6f
+Jul-20 17:23:07.337 [main] DEBUG nextflow.Session - Run name: gigantic_hopper
+Jul-20 17:23:07.338 [main] DEBUG nextflow.Session - Executor pool size: 8
+Jul-20 17:23:07.351 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-20 17:23:07.363 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-20 17:23:07.402 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (21:49 EEST)
+  System: Linux 5.15.0-139-generic
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 17.0.15+6-Ubuntu-0ubuntu120.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 17149@Sisi [127.0.1.1]
+  CPUs: 8 - Mem: 6.7 GB (2.7 GB) - Swap: 2 GB (1.3 GB)
+Jul-20 17:23:07.437 [main] DEBUG nextflow.Session - Work-dir: /home/sisi/RNalyze-NF/work [ext2/ext3]
+Jul-20 17:23:07.464 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-20 17:23:07.478 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-20 17:23:07.482 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Jul-20 17:23:07.539 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-20 17:23:07.554 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Jul-20 17:23:07.645 [main] DEBUG nextflow.Session - Session start
+Jul-20 17:23:07.656 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Jul-20 17:23:07.662 [main] DEBUG nextflow.Session - Using default localLib path: /home/sisi/RNalyze-NF/lib
+Jul-20 17:23:09.358 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-20 17:23:09.888 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_96ee663b5408389b: /home/sisi/RNalyze-NF/modules/reference/bwa_index.nf
+  _nf_script_998f2dd6c2fb9fa8: /home/sisi/RNalyze-NF/modules/qc/multiqc.nf
+  _nf_script_4d99d98a2c07a303: /home/sisi/RNalyze-NF/subworkflows/alignment.nf
+  _nf_script_09f1ce0ded1c97a1: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_flagstat.nf
+  _nf_script_6a4fe9420b74882a: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_idxstats.nf
+  _nf_script_0d24c0d690496ec6: /home/sisi/RNalyze-NF/subworkflows/trimming.nf
+  _nf_script_841c15dee6fcf759: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_stats.nf
+  _nf_script_9a73e1c9d27a6abe: /home/sisi/RNalyze-NF/modules/trimming/trimmomatic.nf
+  _nf_script_19aaa142739f77f0: /home/sisi/RNalyze-NF/modules/quantification/featurecounts.nf
+  _nf_script_a43494e5589d0e88: /home/sisi/RNalyze-NF/modules/reference/hisat2_build.nf
+  _nf_script_d7badce2feb88c1f: /home/sisi/RNalyze-NF/modules/trimming/cutadapt.nf
+  _nf_script_9f49c3519d1b0503: /home/sisi/RNalyze-NF/modules/input/input.nf
+  _nf_script_287734917818b900: /home/sisi/RNalyze-NF/subworkflows/post_alignment.nf
+  _nf_script_de59286e8a3c0291: /home/sisi/RNalyze-NF/modules/qc/fastqc.nf
+  _nf_script_c7bde2a85eeb452f: /home/sisi/RNalyze-NF/subworkflows/quantification.nf
+  _nf_script_01d570c0dbe57260: /home/sisi/RNalyze-NF/subworkflows/qc.nf
+  _nf_script_3d842c1588e0d5bb: /home/sisi/RNalyze-NF/modules/alignment/hisat2.nf
+  _nf_script_2deb1e2bf4e214a8: /home/sisi/RNalyze-NF/subworkflows/reference.nf
+  _nf_script_0d565bec3c81fef0: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_sort.nf
+  _nf_script_87a440cf604fd56d: /home/sisi/RNalyze-NF/modules/reference/bowtie2_build.nf
+  _nf_script_9f17c245fbbdd3eb: /home/sisi/RNalyze-NF/modules/post_alignment/samtools_index.nf
+  _nf_script_68d5101c5e6ad2cb: /home/sisi/RNalyze-NF/modules/reference/reference_manager.nf
+  _nf_script_6c521eb31ab3df05: /home/sisi/RNalyze-NF/modules/alignment/bowtie2.nf
+  Main: /home/sisi/RNalyze-NF/main.nf
+  _nf_script_187ba2a2d06b5d80: /home/sisi/RNalyze-NF/subworkflows/preprocessing.nf
+  _nf_script_7253ae84e1afcb25: /home/sisi/RNalyze-NF/modules/alignment/bwa.nf
+Jul-20 17:23:09.889 [main] DEBUG nextflow.Session - Session aborted -- Cause: 
+Trimmomatic requires at least one trimming operation.
+
+Example:
+
+    --trimmomatic_args "SLIDINGWINDOW:4:20 MINLEN:36"
+
+or
+
+    --trimmomatic_args "ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:20 MINLEN:36"
+
+Jul-20 17:23:09.910 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Jul-20 17:23:10.074 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.exception.WorkflowScriptErrorException: 
+Trimmomatic requires at least one trimming operation.
+
+Example:
+
+    --trimmomatic_args "SLIDINGWINDOW:4:20 MINLEN:36"
+
+or
+
+    --trimmomatic_args "ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 SLIDINGWINDOW:4:20 MINLEN:36"
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.Nextflow.error(Nextflow.groovy:253)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Main$_runScript_closure1$_closure2.doCall(Main:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:187)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:297)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:308)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy:99)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:229)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:128)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
