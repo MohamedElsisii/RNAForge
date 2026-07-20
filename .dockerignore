@@ -1,0 +1,14 @@
+.git
+.github
+.nextflow
+.nextflow*
+work
+results
+.cache
+*.log
+*.tmp
+*.swp
+README.md
+docs
+test_data
+tests
