@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: RNAForge
+message: "If you use RNAForge, please cite this software."
+type: software
+
+authors:
+  - family-names: Elsisi
+    given-names: Mohamed
+    orcid: https://orcid.org/YOUR-ORCID
+
+repository-code: https://github.com/MohamedElsisii/RNAForge
+
+license: MIT
+
+version: 1.0.0
+
+date-released: 2026-07-21
