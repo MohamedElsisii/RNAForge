@@ -7,6 +7,7 @@
 
 **RNAForge** provides a modular, reproducible, and containerized RNA-seq workflow for quality control, alignment, and gene quantification using Nextflow DSL2.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21473005.svg)](https://doi.org/10.5281/zenodo.21473005)
 ![Nextflow](https://img.shields.io/badge/Nextflow-DSL2-23aa62?logo=nextflow)
 ![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?logo=docker)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
@@ -350,13 +351,23 @@ nextflow run main.nf -profile slurm
 
 ## Citation
 
-If you use RNAForge in your research, please cite:
+If you use **RNAForge** in your research, please cite the archived software release:
 
-- The GitHub repository
-- The Zenodo DOI
-- Any associated publication
+```bibtex
+@software{elsisi2026rnaforge,
+  author       = {Mohamed Elsisi},
+  title        = {RNAForge},
+  year         = {2026},
+  version      = {1.0.0},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.21473005},
+  url          = {https://doi.org/10.5281/zenodo.21473005}
+}
+```
 
-See `CITATION.cff` for complete citation information.
+**DOI:** https://doi.org/10.5281/zenodo.21473005
+
+For additional citation metadata, see `CITATION.cff`.
 
 ---
 
