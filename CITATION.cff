@@ -6,10 +6,31 @@ type: software
 authors:
   - family-names: Elsisi
     given-names: Mohamed
-    orcid: https://orcid.org/0009-0003-2734-505X 
+    orcid: https://orcid.org/0009-0003-2734-505X
+
+abstract: >
+  RNAForge is a modular, reproducible, and scalable Nextflow DSL2 pipeline
+  for RNA-seq analysis. It provides an end-to-end workflow for quality
+  control, optional read trimming, reference genome retrieval and indexing,
+  sequence alignment, post-alignment processing, and gene quantification
+  using containerized and reproducible execution environments.
 
 repository-code: https://github.com/MohamedElsisii/RNAForge
+url: https://github.com/MohamedElsisii/RNAForge
+
+doi: 10.5281/zenodo.21473005
 
 license: MIT
 version: 1.0.0
 date-released: 2026-07-21
+
+keywords:
+  - RNA-seq
+  - Bioinformatics
+  - Nextflow
+  - Nextflow DSL2
+  - Workflow
+  - Transcriptomics
+  - NGS
+  - Docker
+  - Reproducibility
