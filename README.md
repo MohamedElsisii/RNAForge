@@ -344,7 +344,6 @@ nextflow run main.nf -profile slurm
 | `--trimmer` | No | Trimming software (`cutadapt`, `trimmomatic`) | `cutadapt` |
 | `--outdir` | No | Output directory | `results/` |
 | `-profile docker` | No | Execute using Docker containers | Disabled |
-| `-profile apptainer` | No | Execute using Apptainer containers | Disabled |
 | `-resume` | No | Resume a previous workflow execution | Disabled |
 
 ---
