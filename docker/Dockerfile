@@ -26,7 +26,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/opt/conda/bin:${PATH}"
 
 SHELL ["/bin/bash", "-c"]
-RUN conda list -n rnaforge > /opt/rnaforge-package-list.txt
+
 # ------------------------------------------------------------------------------
 # Install system dependencies
 # ------------------------------------------------------------------------------
@@ -75,8 +75,10 @@ RUN mamba env create \
         -n rnaforge && \
     conda clean -afy
 
-ENV PATH="/opt/conda/envs/rnaforge/bin:${PATH}"
-
+ENV CONDA_DEFAULT_ENV=rnaforge
+ENV PATH=/opt/conda/envs/rnaforge/bin:/opt/conda/bin:$PATH
+RUN conda env export -n rnaforge --no-builds > /opt/rnaforge-environment.yml && \
+    conda list -n rnaforge > /opt/rnaforge-package-list.txt
 # ------------------------------------------------------------------------------
 # Working directory
 # ------------------------------------------------------------------------------
